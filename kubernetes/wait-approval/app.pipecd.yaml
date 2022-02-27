@@ -15,16 +15,16 @@ spec:
       - name: WAIT_APPROVAL
         with:
           approvers:
-            - nghialv
+            - hello-pipecd
       - name: K8S_PRIMARY_ROLLOUT
       - name: K8S_CANARY_CLEAN
-  notification:
-    mentions:
-      - event: DEPLOYMENT_WAIT_APPROVAL
-        slack:
-          - slack-user-id-1  # slack-user-name-1
-          - slack-user-id-2  # slack-user-name-2
+  # notification:
+  #   mentions:
+  #     - event: DEPLOYMENT_WAIT_APPROVAL
+  #       slack:
+  #         - slack-user-id-1  # slack-user-name-1
+  #         - slack-user-id-2  # slack-user-name-2
       # Specifying "*" means mentioning the given users for all events.
-      - event: "*"
-        slack:
-          - slack-user-id-3  # slack-user-name-3
+      # - event: "*"
+      #   slack:
+      #     - slack-user-id-3  # slack-user-name-3
